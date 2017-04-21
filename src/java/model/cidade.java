@@ -1,10 +1,5 @@
-
 package model;
 
-/**
- *
- * @author LucianoFreire
- */
 public class cidade {
     
     private int id;
@@ -42,6 +37,5 @@ public class cidade {
 
     public void setId_estado(String id_estado) {
         this.id_estado = id_estado;
-    }
-    
+    }    
 }

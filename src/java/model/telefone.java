@@ -1,10 +1,5 @@
-
 package model;
 
-/**
- *
- * @author LucianoFreire
- */
 public class telefone {
     
     private int id;

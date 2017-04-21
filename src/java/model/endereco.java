@@ -1,10 +1,5 @@
-
 package model;
 
-/**
- *
- * @author LucianoFreire
- */
 public class endereco {
     
     private int id;
@@ -82,6 +77,5 @@ public class endereco {
 
     public void setId_cidade(String id_cidade) {
         this.id_cidade = id_cidade;
-    }   
-    
+    }      
 }

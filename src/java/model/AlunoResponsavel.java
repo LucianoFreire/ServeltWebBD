@@ -1,10 +1,5 @@
-
 package model;
 
-/**
- *
- * @author LucianoFreire
- */
 public class AlunoResponsavel {
     
     private int id;

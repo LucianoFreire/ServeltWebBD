@@ -1,12 +1,7 @@
-
 package conexao;
 
 import java.sql.*;
 
-/**
- *
- * @author LucianoFreire
- */
 public class ConexaoBD {
     
     protected Connection con;

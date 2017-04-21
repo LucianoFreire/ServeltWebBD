@@ -1,10 +1,5 @@
-
 package model;
 
-/**
- *
- * @author LucianoFreire
- */
 public class estado {
     
     private int id;
@@ -42,7 +37,5 @@ public class estado {
 
     public void setSigla(String sigla) {
         this.sigla = sigla;
-    }
-    
-    
+    }    
 }

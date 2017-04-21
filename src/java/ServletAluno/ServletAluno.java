@@ -9,10 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import model.AlunoResponsavel;
 import model.ParametrosAluno;
 
-/**
- *
- * @author luciano
- */
+
 public class ServletAluno extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
