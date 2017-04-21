@@ -44,6 +44,4 @@ public class cidade {
         this.id_estado = id_estado;
     }
     
-    
-    
 }
