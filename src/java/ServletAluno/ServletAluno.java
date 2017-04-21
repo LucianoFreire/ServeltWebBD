@@ -112,12 +112,13 @@ public class ServletAluno extends HttpServlet {
             ParametrosAluno acesso = new ParametrosAluno();
             
             AlunoResponsavel aluno = new AlunoResponsavel();
-
+            
             aluno.setNome(request.getParameter("nome"));
             aluno.setSobrenome(request.getParameter("sobrenome"));
             aluno.setMatricula(request.getParameter("matricula"));
 
             acesso.InserirAluno(aluno);
+           
 
         } catch (Exception ex) {
 
