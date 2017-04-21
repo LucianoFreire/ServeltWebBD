@@ -11,15 +11,15 @@ public class ConexaoBD {
     
     protected Connection con;
     protected Statement stmt;
-    private String serverName = "187.45.190.93";
-    //private String serverName = "localhost";
+    //private String serverName = "187.45.190.93";
+    private String serverName = "localhost";
     private String portNumber = "3306";
     private String dataBaseName = "u831468724_ifms";
     private String url = "jdbc:mysql://localhost:3306/" + dataBaseName;
-    private String userName = "u831468724_3213";
-    //private String userName = "root";
-    private String password = "I3F2M1S3";
-    //private String password = "";
+    //private String userName = "u831468724_3213";
+    private String userName = "root";
+    //private String password = "I3F2M1S3";
+    private String password = "";
     private String errString;
     
      public ConexaoBD(){
