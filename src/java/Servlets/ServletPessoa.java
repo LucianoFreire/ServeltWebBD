@@ -9,10 +9,6 @@ import javax.servlet.http.HttpServletResponse;
 import model.ParametrosPessoa;
 import model.Pessoa;
 
-/**
- *
- * @author luciano
- */
 public class ServletPessoa extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
