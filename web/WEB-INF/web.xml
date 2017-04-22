@@ -8,6 +8,10 @@
         <servlet-name>ServletPessoa</servlet-name>
         <servlet-class>ServletPessoa.ServletPessoa</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ServletEstado</servlet-name>
+        <servlet-class>ServletEstado.ServletEstado</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ServletAluno</servlet-name>
         <url-pattern>/ServletAluno</url-pattern>
@@ -15,6 +19,10 @@
     <servlet-mapping>
         <servlet-name>ServletPessoa</servlet-name>
         <url-pattern>/ServletPessoa</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletEstado</servlet-name>
+        <url-pattern>/ServletEstado</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
