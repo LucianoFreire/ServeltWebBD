@@ -1,33 +1,20 @@
 package model;
 
-/**
- *
- * @author LucianoFreire
- */
 public class Pessoa {
-    
+
     private int id;
     private String nome;
     private String sobrenome;
     private String email;
-    //private String idconjuge_pessoa;
-    //private String id_endereco;
+    private String idconjuge_pessoa;
+    private String id_endereco;
     private String id_aluno_responsavel;
-    
 
     public Pessoa() {
-        
+
     }
 
-    public Pessoa(int id, String nome, String sobrenome, String email, String id_aluno_responsavel) {
-        this.id = id;
-        this.nome = nome;
-        this.sobrenome = sobrenome;
-        this.email = email;
-        this.id_aluno_responsavel = id_aluno_responsavel;
-      
-    }
-    /*public Pessoa(int id, String nome, String sobrenome, String email, String idconjuge_pessoa, String id_endereco, String id_aluno_responsavel) {
+    public Pessoa(int id, String nome, String sobrenome, String email, String idconjuge_pessoa, String id_endereco, String id_aluno_responsavel) {
         this.id = id;
         this.nome = nome;
         this.sobrenome = sobrenome;
@@ -35,9 +22,7 @@ public class Pessoa {
         this.idconjuge_pessoa = idconjuge_pessoa;
         this.id_endereco = id_endereco;
         this.id_aluno_responsavel = id_aluno_responsavel;
-    }*/
-    
-    
+    }
 
     public int getId() {
         return id;
@@ -71,7 +56,7 @@ public class Pessoa {
         this.email = email;
     }
 
-   /* public String getIdconjuge_pessoa() {
+    public String getIdconjuge_pessoa() {
         return idconjuge_pessoa;
     }
 
@@ -85,7 +70,7 @@ public class Pessoa {
 
     public void setId_endereco(String id_endereco) {
         this.id_endereco = id_endereco;
-    }*/
+    }
 
     public String getId_aluno_responsavel() {
         return id_aluno_responsavel;
@@ -94,7 +79,4 @@ public class Pessoa {
     public void setId_aluno_responsavel(String id_aluno_responsavel) {
         this.id_aluno_responsavel = id_aluno_responsavel;
     }
-    
-    
-
 }

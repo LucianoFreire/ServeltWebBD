@@ -1,4 +1,5 @@
-package ServletPessoa;
+
+package Servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -6,25 +7,23 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import model.ParametrosPessoa;
-import model.Pessoa;
+import model.ParametrosEstado;
+import model.Estado;
 
-/**
- *
- * @author luciano
- */
-public class ServletPessoa extends HttpServlet {
+
+public class ServletEstado extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
+        
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
 
-        ParametrosPessoa acesso = new ParametrosPessoa();
-
+        ParametrosEstado acesso = new ParametrosEstado();
+        
         try {
-            String html = "<html>\n"
+            String html
+                    = "<html>\n"
                     + "    <head>\n"
                     + "        <title>Servlet Banco de Dados</title>\n"
                     + "        <meta charset=\"UTF-8\">\n"
@@ -42,6 +41,7 @@ public class ServletPessoa extends HttpServlet {
                     + "                <ul class=\"nav navbar-nav\">\n"
                     + "                    <li class=\"active\"><a href=\"aluno.html\">ALUNO</a></li>\n"
                     + "                    <li><a href=\"pessoa.html\">PESSOA</a></li>\n"
+                    + "                    <li><a href=\"estado.html\">ESTADO</a></li>\n"
                     + "                </ul>\n"
                     + "                <ul class=\"nav navbar-nav navbar-right\">\n"
                     + "                    <li><a href=\"#\"><span class=\"glyphicon glyphicon-user\"></span> Sign Up</a></li>\n"
@@ -51,33 +51,30 @@ public class ServletPessoa extends HttpServlet {
                     + "        </nav>"
                     + "<form align=\"center\">\n"
                     + "<div class=\"container\">\n"
-                    + "                <h2><b>LISTAGEM DE PESSOAS<b></h2>\n"
+                    + "                <h2><b>LISTAGEM DE ESTADO<b></h2>\n"
                     + "                <table class=\"table table-striped\">\n"
                     + "                    <thead>\n"
                     + "                        <tr>\n"
                     + "                            <th>ID</th>\n"
                     + "                            <th>NOME</th>\n"
-                    + "                            <th>SOBRENOME</th>\n"
-                    + "                            <td><b>EMAIL</b></td>\n"
-                    //+                              "<td>Conjuge</td>\n"
-                    // +                              "<td>Endereço</td>\n"
-                    + "                            <td><b>ALUNO/RESPONSAVEL</b></td>\n"
+                    + "                            <th>SIGLA</th>\n"
                     + "                        </tr>\n"
                     + "                    </thead>\n"
-                    + acesso.listarPessoa()
-                    + "</div>"
+                    + acesso.listarEstado()
+                    + "                </table>\n"
+                    + "            </div>"
                     + "<br>"
                     + "                <table width=\"20%\" cellspacing=\"10\" align=center>\n"
                     + "\n"
                     + "                <tr>\n"
                     + "                    <td>\n"
                     + "                        <button type=\"submit\" class=\"btn btn-success\">"
-                    + "                        <a href=\"pessoa.html\">Voltar</a>"
+                    + "                        <a href=\"estado.html\">Voltar</a>"
                     + "                        </button>\n"
                     + "                    </td>\n"
                     + "                    <td>\n"
                     + "                        <button type=\"submit\" class=\"btn btn-info\">\n"
-                    + "                        <a href=\"ServletPessoa\">Atualizar Tabela</a>"
+                    + "                        <a href=\"ServletEstado\">Atualizar Tabela</a>"
                     + "                        </button>\n"
                     + "                    </td>\n"
                     + "                    </tr> \n"
@@ -91,6 +88,7 @@ public class ServletPessoa extends HttpServlet {
         } catch (Exception e) {
 
         }
+        
     }
 
     @Override
@@ -99,9 +97,11 @@ public class ServletPessoa extends HttpServlet {
         processRequest(request, response);
     }
 
+   
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
         processRequest(request, response);
 
         response.setContentType("text/html;charset=UTF-8");
@@ -109,24 +109,23 @@ public class ServletPessoa extends HttpServlet {
 
         try {
 
-            ParametrosPessoa acesso = new ParametrosPessoa();
-            Pessoa pessoa = new Pessoa();
+            ParametrosEstado acesso = new ParametrosEstado();
+            
+            Estado estado = new Estado();
+            
+            estado.setNome(request.getParameter("nome"));
+            estado.setSigla(request.getParameter("sigla"));
 
-            pessoa.setNome(request.getParameter("nome"));
-            pessoa.setSobrenome(request.getParameter("sobrenome"));
-            pessoa.setEmail(request.getParameter("email"));
-            //pessoa.setIdconjuge_pessoa(request.getParameter("idconjuge_pessoa"));
-            //pessoa.setId_endereco(request.getParameter("id_endereco"));
-            pessoa.setId_aluno_responsavel(request.getParameter("id_aluno_responsavel"));
-
-            acesso.InserirPessoa(pessoa);
+            acesso.InserirEstado(estado);
+           
 
         } catch (Exception ex) {
 
         }
-
+ 
     }
 
+    
     @Override
     public String getServletInfo() {
         return "Short description";

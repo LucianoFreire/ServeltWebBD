@@ -1,16 +1,16 @@
 package model;
 
-public class AlunoResponsavel {
-    
+public class Aluno {
+
     private int id;
     private String nome;
     private String sobrenome;
     private String matricula;
 
-    public AlunoResponsavel() {
+    public Aluno() {
     }
 
-    public AlunoResponsavel(int id, String nome, String sobrenome, String matricula) {
+    public Aluno(int id, String nome, String sobrenome, String matricula) {
         this.id = id;
         this.nome = nome;
         this.sobrenome = sobrenome;
@@ -48,5 +48,5 @@ public class AlunoResponsavel {
     public void setMatricula(String matricula) {
         this.matricula = matricula;
     }
-    
+
 }

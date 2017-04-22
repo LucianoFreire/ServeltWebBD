@@ -1,5 +1,4 @@
-
-package ServletEstado;
+package Servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -7,20 +6,20 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import model.ParametrosEstado;
-import model.estado;
+import model.Aluno;
+import model.ParametrosAluno;
 
 
-public class ServletEstado extends HttpServlet {
+public class ServletAluno extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
 
-        ParametrosEstado acesso = new ParametrosEstado();
-        
+        ParametrosAluno acesso = new ParametrosAluno();
+
         try {
             String html
                     = "<html>\n"
@@ -41,7 +40,6 @@ public class ServletEstado extends HttpServlet {
                     + "                <ul class=\"nav navbar-nav\">\n"
                     + "                    <li class=\"active\"><a href=\"aluno.html\">ALUNO</a></li>\n"
                     + "                    <li><a href=\"pessoa.html\">PESSOA</a></li>\n"
-                    + "                    <li><a href=\"estado.html\">ESTADO</a></li>\n"
                     + "                </ul>\n"
                     + "                <ul class=\"nav navbar-nav navbar-right\">\n"
                     + "                    <li><a href=\"#\"><span class=\"glyphicon glyphicon-user\"></span> Sign Up</a></li>\n"
@@ -51,16 +49,17 @@ public class ServletEstado extends HttpServlet {
                     + "        </nav>"
                     + "<form align=\"center\">\n"
                     + "<div class=\"container\">\n"
-                    + "                <h2><b>LISTAGEM DE ESTADO<b></h2>\n"
+                    + "                <h2><b>LISTAGEM DE ALUNOS<b></h2>\n"
                     + "                <table class=\"table table-striped\">\n"
                     + "                    <thead>\n"
                     + "                        <tr>\n"
                     + "                            <th>ID</th>\n"
                     + "                            <th>NOME</th>\n"
-                    + "                            <th>SIGLA</th>\n"
+                    + "                            <th>SOBRENOME</th>\n"
+                    + "                            <th>MATRICULA</th>\n"
                     + "                        </tr>\n"
                     + "                    </thead>\n"
-                    + acesso.listarEstado()
+                    + acesso.listarAluno()
                     + "                </table>\n"
                     + "            </div>"
                     + "<br>"
@@ -69,12 +68,12 @@ public class ServletEstado extends HttpServlet {
                     + "                <tr>\n"
                     + "                    <td>\n"
                     + "                        <button type=\"submit\" class=\"btn btn-success\">"
-                    + "                        <a href=\"estado.html\">Voltar</a>"
+                    + "                        <a href=\"aluno.html\">Voltar</a>"
                     + "                        </button>\n"
                     + "                    </td>\n"
                     + "                    <td>\n"
                     + "                        <button type=\"submit\" class=\"btn btn-info\">\n"
-                    + "                        <a href=\"ServletEstado\">Atualizar Tabela</a>"
+                    + "                        <a href=\"ServletAluno\">Atualizar Tabela</a>"
                     + "                        </button>\n"
                     + "                    </td>\n"
                     + "                    </tr> \n"
@@ -88,7 +87,6 @@ public class ServletEstado extends HttpServlet {
         } catch (Exception e) {
 
         }
-        
     }
 
     @Override
@@ -97,11 +95,10 @@ public class ServletEstado extends HttpServlet {
         processRequest(request, response);
     }
 
-   
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+
         processRequest(request, response);
 
         response.setContentType("text/html;charset=UTF-8");
@@ -109,23 +106,23 @@ public class ServletEstado extends HttpServlet {
 
         try {
 
-            ParametrosEstado acesso = new ParametrosEstado();
+            ParametrosAluno acesso = new ParametrosAluno();
             
-            estado estado = new estado();
+            Aluno aluno = new Aluno();
             
-            estado.setNome(request.getParameter("nome"));
-            estado.setSigla(request.getParameter("sigla"));
+            aluno.setNome(request.getParameter("nome"));
+            aluno.setSobrenome(request.getParameter("sobrenome"));
+            aluno.setMatricula(request.getParameter("matricula"));
 
-            acesso.InserirEstado(estado);
+            acesso.InserirAluno(aluno);
            
 
         } catch (Exception ex) {
 
         }
- 
+
     }
 
-    
     @Override
     public String getServletInfo() {
         return "Short description";
