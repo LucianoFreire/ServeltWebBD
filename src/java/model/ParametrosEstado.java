@@ -34,7 +34,7 @@ public class ParametrosEstado extends ConexaoBD {
         }
     }
 
-    public String listarEstado() {
+    public String ListarEstado() {
 
         String html = "";
 

@@ -36,7 +36,7 @@ public class ServletEstado extends HttpServlet {
                     + "        <nav class=\"navbar navbar-inverse\">\n"
                     + "            <div class=\"container-fluid\">\n"
                     + "                <div class=\"navbar-header\">\n"
-                    + "                    <a class=\"navbar-brand\" href=\"formulario.html\">ServletBD</a>\n"
+                    + "                    <a class=\"navbar-brand\" href=\"formulario.html\">Sistema de Cadastros</a>\n"
                     + "                </div>\n"
                     + "                <ul class=\"nav navbar-nav\">\n"
                     + "                    <li class=\"active\"><a href=\"formulario.html\">FORMULARIO DE CADASTRO</a></li>\n"                 
@@ -49,7 +49,7 @@ public class ServletEstado extends HttpServlet {
                     + "        </nav>"
                     + "<form align=\"center\">\n"
                     + "<div class=\"container\">\n"
-                    + "                <h2><b>LISTAGEM DE ESTADO<b></h2>\n"
+                    + "                <h2><b>LISTAGEM DE ESTADOS<b></h2>\n"
                     + "                <table class=\"table table-striped\">\n"
                     + "                    <thead>\n"
                     + "                        <tr>\n"
@@ -58,7 +58,7 @@ public class ServletEstado extends HttpServlet {
                     + "                            <th>SIGLA</th>\n"
                     + "                        </tr>\n"
                     + "                    </thead>\n"
-                    + acesso.listarEstado()
+                    + acesso.ListarEstado()
                     + "                </table>\n"
                     + "            </div>"
                     + "<br>"
