@@ -6,21 +6,21 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import model.ParametrosPessoa;
-import model.Pessoa;
+import model.Cidade;
+import model.ParametrosCidade;
 
-public class ServletPessoa extends HttpServlet {
+public class ServletCidade extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
 
-        ParametrosPessoa acesso = new ParametrosPessoa();
+        ParametrosCidade acesso = new ParametrosCidade();
 
         try {
-            String html = "<html>\n"
+            String html
+                    = "<html>\n"
                     + "    <head>\n"
                     + "        <title>Servlet Banco de Dados</title>\n"
                     + "        <meta charset=\"UTF-8\">\n"
@@ -36,7 +36,7 @@ public class ServletPessoa extends HttpServlet {
                     + "                    <a class=\"navbar-brand\" href=\"formulario.html\">ServletBD</a>\n"
                     + "                </div>\n"
                     + "                <ul class=\"nav navbar-nav\">\n"
-                    + "                    <li class=\"active\"><a href=\"formulario.html\">FORMULARIO DE CADASTRO</a></li>\n"                 
+                    + "                    <li class=\"active\"><a href=\"formulario.html\">FORMULARIO DE CADASTRO</a></li>\n"
                     + "                </ul>\n"
                     + "                <ul class=\"nav navbar-nav navbar-right\">\n"
                     + "                    <li><a href=\"#\"><span class=\"glyphicon glyphicon-user\"></span> Sign Up</a></li>\n"
@@ -46,21 +46,18 @@ public class ServletPessoa extends HttpServlet {
                     + "        </nav>"
                     + "<form align=\"center\">\n"
                     + "<div class=\"container\">\n"
-                    + "                <h2><b>LISTAGEM DE PESSOAS<b></h2>\n"
+                    + "                <h2><b>LISTAGEM DE CIDADES<b></h2>\n"
                     + "                <table class=\"table table-striped\">\n"
                     + "                    <thead>\n"
                     + "                        <tr>\n"
                     + "                            <th>ID</th>\n"
                     + "                            <th>NOME</th>\n"
-                    + "                            <th>SOBRENOME</th>\n"
-                    + "                            <td><b>EMAIL</b></td>\n"
-                    +                              "<td>Conjuge</td>\n"
-                    +                              "<td>Endereço</td>\n"
-                    + "                            <td><b>ALUNO/RESPONSAVEL</b></td>\n"
+                    + "                            <th>ID ESTADO</th>\n"
                     + "                        </tr>\n"
                     + "                    </thead>\n"
-                    + acesso.listarPessoa()
-                    + "</div>"
+                    + acesso.ListarCidade()
+                    + "                </table>\n"
+                    + "            </div>"
                     + "<br>"
                     + "                <table width=\"20%\" cellspacing=\"10\" align=center>\n"
                     + "\n"
@@ -72,7 +69,7 @@ public class ServletPessoa extends HttpServlet {
                     + "                    </td>\n"
                     + "                    <td>\n"
                     + "                        <button type=\"submit\" class=\"btn btn-info\">\n"
-                    + "                        <a href=\"ServletPessoa\">Atualizar Tabela</a>"
+                    + "                        <a href=\"ServletCidade\">Atualizar Tabela</a>"
                     + "                        </button>\n"
                     + "                    </td>\n"
                     + "                    </tr> \n"
@@ -97,7 +94,7 @@ public class ServletPessoa extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+
         processRequest(request, response);
 
         response.setContentType("text/html;charset=UTF-8");
@@ -105,22 +102,19 @@ public class ServletPessoa extends HttpServlet {
 
         try {
 
-            ParametrosPessoa acesso = new ParametrosPessoa();
-            Pessoa pessoa = new Pessoa();
+            ParametrosCidade acesso = new ParametrosCidade();
+            Cidade cidade = new Cidade();
 
-            pessoa.setNome(request.getParameter("nome"));
-            pessoa.setSobrenome(request.getParameter("sobrenome"));
-            pessoa.setEmail(request.getParameter("email"));
-            pessoa.setIdconjuge_pessoa(request.getParameter("idconjuge_pessoa"));
-            pessoa.setId_endereco(request.getParameter("id_endereco"));
-            pessoa.setId_aluno_responsavel(request.getParameter("id_aluno_responsavel"));
+            cidade.setNome(request.getParameter("nome"));
+            cidade.setId_estado(request.getParameter("id_estado"));
 
-            acesso.InserirPessoa(pessoa);
+            
+            acesso.InserirCidade(cidade);
 
+            
         } catch (Exception ex) {
 
         }
-
     }
 
     @Override

@@ -12,6 +12,18 @@
         <servlet-name>ServletEstado</servlet-name>
         <servlet-class>ServletEstado.ServletEstado</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ServletCidade</servlet-name>
+        <servlet-class>Servlets.ServletCidade</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServletTelefone</servlet-name>
+        <servlet-class>Servlets.ServletTelefone</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServletEndereco</servlet-name>
+        <servlet-class>Servlets.ServletEndereco</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ServletAluno</servlet-name>
         <url-pattern>/ServletAluno</url-pattern>
@@ -23,6 +35,18 @@
     <servlet-mapping>
         <servlet-name>ServletEstado</servlet-name>
         <url-pattern>/ServletEstado</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletCidade</servlet-name>
+        <url-pattern>/ServletCidade</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletTelefone</servlet-name>
+        <url-pattern>/ServletTelefone</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletEndereco</servlet-name>
+        <url-pattern>/ServletEndereco</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

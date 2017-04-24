@@ -6,10 +6,10 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import model.ParametrosPessoa;
-import model.Pessoa;
+import model.ParametrosTelefone;
+import model.Telefone;
 
-public class ServletPessoa extends HttpServlet {
+public class ServletTelefone extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -17,10 +17,11 @@ public class ServletPessoa extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
 
-        ParametrosPessoa acesso = new ParametrosPessoa();
+        ParametrosTelefone acesso = new ParametrosTelefone();
 
         try {
-            String html = "<html>\n"
+            String html
+                    = "<html>\n"
                     + "    <head>\n"
                     + "        <title>Servlet Banco de Dados</title>\n"
                     + "        <meta charset=\"UTF-8\">\n"
@@ -46,21 +47,19 @@ public class ServletPessoa extends HttpServlet {
                     + "        </nav>"
                     + "<form align=\"center\">\n"
                     + "<div class=\"container\">\n"
-                    + "                <h2><b>LISTAGEM DE PESSOAS<b></h2>\n"
+                    + "                <h2><b>LISTAGEM DE TELEFONES<b></h2>\n"
                     + "                <table class=\"table table-striped\">\n"
                     + "                    <thead>\n"
                     + "                        <tr>\n"
                     + "                            <th>ID</th>\n"
-                    + "                            <th>NOME</th>\n"
-                    + "                            <th>SOBRENOME</th>\n"
-                    + "                            <td><b>EMAIL</b></td>\n"
-                    +                              "<td>Conjuge</td>\n"
-                    +                              "<td>Endereço</td>\n"
-                    + "                            <td><b>ALUNO/RESPONSAVEL</b></td>\n"
+                    + "                            <th>DDD</th>\n"
+                    + "                            <th>NUMERO</th>\n"
+                    + "                            <th>ID PESSOA</th>\n"
                     + "                        </tr>\n"
                     + "                    </thead>\n"
-                    + acesso.listarPessoa()
-                    + "</div>"
+                    + acesso.ListarTelefone()
+                    + "                </table>\n"
+                    + "            </div>"
                     + "<br>"
                     + "                <table width=\"20%\" cellspacing=\"10\" align=center>\n"
                     + "\n"
@@ -72,7 +71,7 @@ public class ServletPessoa extends HttpServlet {
                     + "                    </td>\n"
                     + "                    <td>\n"
                     + "                        <button type=\"submit\" class=\"btn btn-info\">\n"
-                    + "                        <a href=\"ServletPessoa\">Atualizar Tabela</a>"
+                    + "                        <a href=\"ServletTelefone\">Atualizar Tabela</a>"
                     + "                        </button>\n"
                     + "                    </td>\n"
                     + "                    </tr> \n"
@@ -97,7 +96,7 @@ public class ServletPessoa extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+
         processRequest(request, response);
 
         response.setContentType("text/html;charset=UTF-8");
@@ -105,17 +104,14 @@ public class ServletPessoa extends HttpServlet {
 
         try {
 
-            ParametrosPessoa acesso = new ParametrosPessoa();
-            Pessoa pessoa = new Pessoa();
+            ParametrosTelefone acesso = new ParametrosTelefone();
+            Telefone telefone = new Telefone();
 
-            pessoa.setNome(request.getParameter("nome"));
-            pessoa.setSobrenome(request.getParameter("sobrenome"));
-            pessoa.setEmail(request.getParameter("email"));
-            pessoa.setIdconjuge_pessoa(request.getParameter("idconjuge_pessoa"));
-            pessoa.setId_endereco(request.getParameter("id_endereco"));
-            pessoa.setId_aluno_responsavel(request.getParameter("id_aluno_responsavel"));
+            telefone.setDd(request.getParameter("dd"));
+            telefone.setNumero(request.getParameter("numero"));
+            telefone.setId_pessoa(request.getParameter("id_pessoa"));
 
-            acesso.InserirPessoa(pessoa);
+            acesso.InserirTelefone(telefone);
 
         } catch (Exception ex) {
 
