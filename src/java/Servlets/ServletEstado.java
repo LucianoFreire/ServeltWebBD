@@ -36,10 +36,10 @@ public class ServletEstado extends HttpServlet {
                     + "        <nav class=\"navbar navbar-inverse\">\n"
                     + "            <div class=\"container-fluid\">\n"
                     + "                <div class=\"navbar-header\">\n"
-                    + "                    <a class=\"navbar-brand\" href=\"formulario.html\">Sistema de Cadastros</a>\n"
+                    + "                    <a class=\"navbar-brand\" href=\"index.html\">Sistema de Cadastros</a>\n"
                     + "                </div>\n"
                     + "                <ul class=\"nav navbar-nav\">\n"
-                    + "                    <li class=\"active\"><a href=\"formulario.html\">FORMULARIO DE CADASTRO</a></li>\n"                 
+                    + "                    <li class=\"active\"><a href=\"index.html\">FORMULARIO DE CADASTRO</a></li>\n"                 
                     + "                </ul>\n"
                     + "                <ul class=\"nav navbar-nav navbar-right\">\n"
                     + "                    <li><a href=\"#\"><span class=\"glyphicon glyphicon-user\"></span> Sign Up</a></li>\n"
@@ -67,7 +67,7 @@ public class ServletEstado extends HttpServlet {
                     + "                <tr>\n"
                     + "                    <td>\n"
                     + "                        <button type=\"submit\" class=\"btn btn-success\">"
-                    + "                        <a href=\"formulario.html\">Voltar</a>"
+                    + "                        <a href=\"index.html\">Voltar</a>"
                     + "                        </button>\n"
                     + "                    </td>\n"
                     + "                    <td>\n"
@@ -122,8 +122,7 @@ public class ServletEstado extends HttpServlet {
         }
  
     }
-
-    
+   
     @Override
     public String getServletInfo() {
         return "Short description";

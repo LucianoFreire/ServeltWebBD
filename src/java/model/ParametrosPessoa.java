@@ -38,7 +38,7 @@ public class ParametrosPessoa extends ConexaoBD {
         }
     }
 
-    public String listarPessoa() {
+    public String ListarPessoa() {
 
         String html = "";
 

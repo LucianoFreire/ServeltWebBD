@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<!--SEQUENCIA DO FORMULARIO = ALUNO, PESSOA, ESTADO, CIDADE, ENDERECO, TELEFONE 
-
-PESSOA NAO RODA - ERRO AO INSERIR E LISTAR
+<!-- PESSOA NAO RODA - ERRO AO INSERIR E LISTAR
 ESTADO NAO RODA - ERRO AO INSERIR E LISTAR-->
 <html>
     <head>
@@ -15,10 +13,10 @@ ESTADO NAO RODA - ERRO AO INSERIR E LISTAR-->
         <nav class="navbar navbar-inverse">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="formulario.html">ServletBD</a>
+                    <a class="navbar-brand" href="index.html">ServletBD</a>
                 </div>
                 <ul class="nav navbar-nav active">
-                    <li><a href="formulario.html">FORMULÁRIO DE CADASTRO</a></li>
+                    <li><a href="index.html">FORMULÁRIO DE CADASTRO</a></li>
                 </ul>
             </div>
         </nav>
@@ -61,12 +59,187 @@ ESTADO NAO RODA - ERRO AO INSERIR E LISTAR-->
                     </td>
                     <td>
                         <button type="submit" class="btn btn-default">
-                            <a href="formulario.html">Novo Cadastro! Limpar Campos</a></button>
+                            <a href="index.html">Novo Cadastro! Limpar Campos</a></button>
                     </td>
                 </tr> 
             </table>
         </form>
+        <hr>
 
+        <!-- FORMULARIO ESTADO -->
+        <form method="post" action="ServletEstado">
+
+            <div class="container">
+                <h2>FORMULÁRIO ESTADO</h2>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>NOME</th>
+                            <th>SIGLA</th>                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>            
+                            <td><input type="text" name="nome"></td>
+                            <td><input type="text" name="sigla"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>  
+            <br>   
+
+            <table width="40%" cellspacing="10" align=center>
+
+                <tr>
+                    <td>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </td>
+                    <td>
+                        <button type="submit" class="btn btn-info">
+                            <a href="ServletEstado">Listagem de Estados</a></button>
+                    </td>
+                    <td>
+                        <button type="submit" class="btn btn-default">
+                            <a href="index.html">Novo Cadastro! Limpar Campos</a></button>
+                    </td>
+                </tr> 
+            </table>
+        </form>
+        <hr>
+        <!-- FORMULARIO CIDADE -->
+        <form method="post" action="ServletCidade">
+
+            <div class="container">
+                <h2>FORMULÁRIO CIDADE</h2>
+
+                <table class="table table-striped">
+                    <thead>
+                        <tr>  
+                            <td><p><b>NOME</b></p></td>
+                            <td><p><b>ID ESTADO</b></p></td>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>              
+                            <td><input type="text" name="nome"></td>
+                            <td><input type="text" name="id_estado"></td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div> 
+            <br>
+            <table width="40%" cellspacing="10" align=center>
+
+                <tr>
+                    <td>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </td>
+                    <td>
+                        <button type="submit" class="btn btn-info">
+                            <a href="ServletCidade">Listagem de Cidades</a></button>
+                    </td>
+                    <td>
+                        <button type="submit" class="btn btn-default">
+                            <a href="index.html">Novo Cadastro! Limpar Campos</a></button>
+                    </td>
+                </tr> 
+            </table>    
+        </form>
+        <hr>
+        <!-- FORMULARIO ENDEREÇO -->
+        <form method="post" action="ServletEndereco">
+
+            <div class="container">
+                <h2>FORMULÁRIO ENDEREÇO</h2>
+
+                <table class="table table-striped">
+                    <thead>
+                        <tr>  
+                            <td><p><b>RUA</b></p></td>
+                            <td><p><b>BAIRRO</b></p></td>
+                            <td><p><b>NÚMERO</b></p></td>
+                            <td><p><b>COMPLEMENTO</b></p></td>
+                            <td><p><b>CEP</b></p></td>
+                            <td><p><b>ID CIDADE</b></p></td>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>              
+                            <td><input type="text" name="rua"></td>
+                            <td><input type="text" name="bairro"></td>
+                            <td><input type="text" name="numero"></td>
+                            <td><input type="text" name="complemento"></td>
+                            <td><input type="text" name="cep"></td>
+                            <td><input type="text" name="id_cidade"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div> 
+            <br>
+            <table width="40%" cellspacing="10" align=center>
+
+                <tr>
+                    <td>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </td>
+                    <td>
+                        <button type="submit" class="btn btn-info">
+                            <a href="ServletEndereco">Listagem de Endereços</a></button>
+                    </td>
+                    <td>
+                        <button type="submit" class="btn btn-default">
+                            <a href="index.html">Novo Cadastro! Limpar Campos</a></button>
+                    </td>
+                </tr> 
+            </table>    
+        </form>
+        <hr>
+        <!-- FORMULARIO TELEFONE -->
+        <form method="post" action="ServletTelefone">
+
+            <div class="container">
+                <h2>FORMULÁRIO TELEFONE</h2>
+
+                <table class="table table-striped">
+                    <thead>
+                        <tr>  
+                            <td><p><b>ID</b></p></td>
+                            <td><p><b>DDD</b></p></td>
+                            <td><p><b>NÚMERO</b></p></td>
+                            <td><p><b>ID PESSOA</b></p></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>              
+                            <td><input type="text" name="id"></td>
+                            <td><input type="text" name="dd"></td>
+                            <td><input type="text" name="numero"></td>
+                            <td><input type="text" name="id_pessoa"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div> 
+            <br>
+            <table width="40%" cellspacing="10" align=center>
+
+                <tr>
+                    <td>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </td>
+                    <td>
+                        <button type="submit" class="btn btn-info">
+                            <a href="ServletTelefone">Listagem de Telefones</a></button>
+                    </td>
+                    <td>
+                        <button type="submit" class="btn btn-default">
+                            <a href="index.html">Novo Cadastro! Limpar Campos</a></button>
+                    </td>
+                </tr> 
+            </table>    
+        </form>
         <hr>
 
         <!-- FORMULARIO PESSOA -->
@@ -112,190 +285,14 @@ ESTADO NAO RODA - ERRO AO INSERIR E LISTAR-->
                     </td>
                     <td>
                         <button type="submit" class="btn btn-default">
-                            <a href="formulario.html">Novo Cadastro! Limpar Campos</a></button>
+                            <a href="index.html">Novo Cadastro! Limpar Campos</a></button>
                     </td>
                 </tr> 
             </table>    
         </form>
         <hr>
-
-        <!-- FORMULARIO ENDEREÇO -->
-        <form method="post" action="ServletEndereco">
-
-            <div class="container">
-                <h2>FORMULÁRIO ENDEREÇO</h2>
-
-                <table class="table table-striped">
-                    <thead>
-                        <tr>  
-                            <td><p><b>RUA</b></p></td>
-                            <td><p><b>BAIRRO</b></p></td>
-                            <td><p><b>NÚMERO</b></p></td>
-                            <td><p><b>COMPLEMENTO</b></p></td>
-                            <td><p><b>CEP</b></p></td>
-                            <td><p><b>ID CIDADE</b></p></td>
-
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>              
-                            <td><input type="text" name="rua"></td>
-                            <td><input type="text" name="bairro"></td>
-                            <td><input type="text" name="numero"></td>
-                            <td><input type="text" name="complemento"></td>
-                            <td><input type="text" name="cep"></td>
-                            <td><input type="text" name="id_cidade"></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div> 
-            <br>
-            <table width="40%" cellspacing="10" align=center>
-
-                <tr>
-                    <td>
-                        <button type="submit" class="btn btn-primary">Enviar</button>
-                    </td>
-                    <td>
-                        <button type="submit" class="btn btn-info">
-                            <a href="ServletEndereco">Listagem de Endereços</a></button>
-                    </td>
-                    <td>
-                        <button type="submit" class="btn btn-default">
-                            <a href="formulario.html">Novo Cadastro! Limpar Campos</a></button>
-                    </td>
-                </tr> 
-            </table>    
-        </form>
-
+        <br>
+        <br>
         <hr>
-
-        <!-- FORMULARIO ESTADO -->
-        <form method="post" action="ServletEstado">
-
-            <div class="container">
-                <h2>FORMULÁRIO ESTADO</h2>
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th>NOME</th>
-                            <th>SIGLA</th>                            
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>            
-                            <td><input type="text" name="nome"></td>
-                            <td><input type="text" name="sigla"></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>  
-            <br>   
-
-            <table width="40%" cellspacing="10" align=center>
-
-                <tr>
-                    <td>
-                        <button type="submit" class="btn btn-primary">Enviar</button>
-                    </td>
-                    <td>
-                        <button type="submit" class="btn btn-info">
-                            <a href="ServletEstado">Listagem de Estados</a></button>
-                    </td>
-                    <td>
-                        <button type="submit" class="btn btn-default">
-                            <a href="formulario.html">Novo Cadastro! Limpar Campos</a></button>
-                    </td>
-                </tr> 
-            </table>
-        </form>
-
-        <hr>
-
-        <!-- FORMULARIO CIDADE -->
-        <form method="post" action="ServletCidade">
-
-            <div class="container">
-                <h2>FORMULÁRIO CIDADE</h2>
-
-                <table class="table table-striped">
-                    <thead>
-                        <tr>  
-                            <td><p><b>NOME</b></p></td>
-                            <td><p><b>ID ESTADO</b></p></td>
-
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>              
-                            <td><input type="text" name="nome"></td>
-                            <td><input type="text" name="id_estado"></td>
-
-                        </tr>
-                    </tbody>
-                </table>
-            </div> 
-            <br>
-            <table width="40%" cellspacing="10" align=center>
-
-                <tr>
-                    <td>
-                        <button type="submit" class="btn btn-primary">Enviar</button>
-                    </td>
-                    <td>
-                        <button type="submit" class="btn btn-info">
-                            <a href="ServletCidade">Listagem de Cidades</a></button>
-                    </td>
-                    <td>
-                        <button type="submit" class="btn btn-default">
-                            <a href="formulario.html">Novo Cadastro! Limpar Campos</a></button>
-                    </td>
-                </tr> 
-            </table>    
-        </form>
-        <hr>
-        <!-- FORMULARIO TELEFONE -->
-        <form method="post" action="ServletTelefone">
-
-            <div class="container">
-                <h2>FORMULÁRIO TELEFONE</h2>
-
-                <table class="table table-striped">
-                    <thead>
-                        <tr>  
-                            <td><p><b>ID</b></p></td>
-                            <td><p><b>DDD</b></p></td>
-                            <td><p><b>NÚMERO</b></p></td>
-                            <td><p><b>ID PESSOA</b></p></td>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>              
-                            <td><input type="text" name="id"></td>
-                            <td><input type="text" name="dd"></td>
-                            <td><input type="text" name="numero"></td>
-                            <td><input type="text" name="id_pessoa"></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div> 
-            <br>
-            <table width="40%" cellspacing="10" align=center>
-
-                <tr>
-                    <td>
-                        <button type="submit" class="btn btn-primary">Enviar</button>
-                    </td>
-                    <td>
-                        <button type="submit" class="btn btn-info">
-                            <a href="ServletTelefone">Listagem de Telefones</a></button>
-                    </td>
-                    <td>
-                        <button type="submit" class="btn btn-default">
-                            <a href="formulario.html">Novo Cadastro! Limpar Campos</a></button>
-                    </td>
-                </tr> 
-            </table>    
-        </form>
     </body>
 </html>
