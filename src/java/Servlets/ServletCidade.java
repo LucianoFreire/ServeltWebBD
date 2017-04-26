@@ -33,7 +33,7 @@ public class ServletCidade extends HttpServlet {
                     + "        <nav class=\"navbar navbar-inverse\">\n"
                     + "            <div class=\"container-fluid\">\n"
                     + "                <div class=\"navbar-header\">\n"
-                    + "                    <a class=\"navbar-brand\" href=\"index.html\">ServletBD</a>\n"
+                    + "                    <a class=\"navbar-brand\" href=\"index.html\">Sistema de Cadastros</a>\n"
                     + "                </div>\n"
                     + "                <ul class=\"nav navbar-nav\">\n"
                     + "                    <li class=\"active\"><a href=\"index.html\">FORMULARIO DE CADASTRO</a></li>\n"

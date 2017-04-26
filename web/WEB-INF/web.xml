@@ -6,11 +6,11 @@
     </servlet>
     <servlet>
         <servlet-name>ServletPessoa</servlet-name>
-        <servlet-class>ServletPessoa.ServletPessoa</servlet-class>
+        <servlet-class>Servlets.ServletPessoa</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>ServletEstado</servlet-name>
-        <servlet-class>ServletEstado.ServletEstado</servlet-class>
+        <servlet-class>Servlets.ServletEstado</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>ServletCidade</servlet-name>
