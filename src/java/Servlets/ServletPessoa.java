@@ -54,9 +54,9 @@ public class ServletPessoa extends HttpServlet {
                     + "                            <th>NOME</th>\n"
                     + "                            <th>SOBRENOME</th>\n"
                     + "                            <td><b>EMAIL</b></td>\n"
-                    +                              "<td>Conjuge</td>\n"
-                    +                              "<td>Endereço</td>\n"
-                    + "                            <td><b>ALUNO/RESPONSAVEL</b></td>\n"
+                    +                              "<td>ID CONJUGE</td>\n"
+                    +                              "<td>ID ENDEREÇO</td>\n"
+                    + "                            <td><b>ID ALUNO</b></td>\n"
                     + "                        </tr>\n"
                     + "                    </thead>\n"
                     + acesso.ListarPessoa()
