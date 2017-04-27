@@ -44,9 +44,9 @@ public class ParametrosCidade extends ConexaoBD {
 
             while (rs.next()) {
                 html = html + "<tr>\n"
-                        + "<td><input type=\"text\" name=\"id\" value=\"" + rs.getString("id") + "\"></td>\n"
-                        + "<td><input type=\"text\" name=\"nome\" value=\"" + rs.getString("nome") + "\"></td>\n"
-                        + "<td><input type=\"text\" name=\"id_estado\" value=\"" + rs.getString("id_estado") + "\"></td>\n"
+                        + "<td><input type=\"text\" class=\"form-control\"name=\"id\" value=\"" + rs.getString("id") + "\"></td>\n"
+                        + "<td><input type=\"text\" class=\"form-control\name=\"nome\" value=\"" + rs.getString("nome") + "\"></td>\n"
+                        + "<td><input type=\"text\" class=\"form-control\name=\"id_estado\" value=\"" + rs.getString("id_estado") + "\"></td>\n"
                         + "</tr>\n";
             }
 

@@ -50,13 +50,13 @@ public class ParametrosPessoa extends ConexaoBD {
             while (rs.next()) {
                 html = html
                         + "<tr>\n"
-                        + "<td><input type=\"text\" name=\"id\" value=\"" + rs.getString("id") + "\"></td>\n"
-                        + "<td><input type=\"text\" name=\"nome\" value=\"" + rs.getString("nome") + "\"></td>\n"
-                        + "<td><input type=\"text\" name=\"sobrenome\" value=\"" + rs.getString("sobrenome") + "\"></td>\n"
-                        + "<td><input type=\"text\" name=\"email\" value=\"" + rs.getString("email") + "\"></td>\n"
-                        + "<td><input type=\"text\" name=\"idconjuge_pessoa\" value=\""+rs.getString("idconjuge_pessoa")+"\"></td>\n"
-                        + "<td><input type=\"text\" name=\"id_endereco\" value=\""+rs.getString("id_endereco")+"\"></td>\n"
-                        + "<td><input type=\"text\" name=\"id_aluno_responsavel\" value=\"" + rs.getString("id_aluno_responsavel") + "\"></td>\n"
+                        + "<td><input type=\"text\" class=\"form-control\name=\"id\" value=\"" + rs.getString("id") + "\"></td>\n"
+                        + "<td><input type=\"text\" class=\"form-control\name=\"nome\" value=\"" + rs.getString("nome") + "\"></td>\n"
+                        + "<td><input type=\"text\" class=\"form-control\name=\"sobrenome\" value=\"" + rs.getString("sobrenome") + "\"></td>\n"
+                        + "<td><input type=\"text\" class=\"form-control\name=\"email\" value=\"" + rs.getString("email") + "\"></td>\n"
+                        + "<td><input type=\"text\" class=\"form-control\name=\"idconjuge_pessoa\" value=\""+rs.getString("idconjuge_pessoa")+"\"></td>\n"
+                        + "<td><input type=\"text\" class=\"form-control\name=\"id_endereco\" value=\""+rs.getString("id_endereco")+"\"></td>\n"
+                        + "<td><input type=\"text\" class=\"form-control\name=\"id_aluno_responsavel\" value=\"" + rs.getString("id_aluno_responsavel") + "\"></td>\n"
                         + "</tr>\n";
             }
 

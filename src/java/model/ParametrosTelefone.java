@@ -47,10 +47,10 @@ public class ParametrosTelefone extends ConexaoBD {
 
             while (rs.next()) {
                 html = html + "<tr>\n"
-                        + "<td><input type=\"text\" name=\"id\" value=\"" + rs.getString("id") + "\"></td>\n"
-                        + "<td><input type=\"text\" name=\"dd\" value=\"" + rs.getString("dd") + "\"></td>\n"
-                        + "<td><input type=\"text\" name=\"numero\" value=\"" + rs.getString("numero") + "\"></td>\n"                       
-                        + "<td><input type=\"text\" name=\"id_pessoa\" value=\"" + rs.getString("id_pessoa") + "\"></td>\n"                       
+                        + "<td><input type=\"text\" class=\"form-control\name=\"id\" value=\"" + rs.getString("id") + "\"></td>\n"
+                        + "<td><input type=\"text\" class=\"form-control\name=\"dd\" value=\"" + rs.getString("dd") + "\"></td>\n"
+                        + "<td><input type=\"text\" class=\"form-control\name=\"numero\" value=\"" + rs.getString("numero") + "\"></td>\n"                       
+                        + "<td><input type=\"text\" class=\"form-control\name=\"id_pessoa\" value=\"" + rs.getString("id_pessoa") + "\"></td>\n"                       
                         + "</tr>\n";
             }
 

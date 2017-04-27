@@ -50,7 +50,7 @@ public class ServletEstado extends HttpServlet {
                     + "<form align=\"center\">\n"
                     + "<div class=\"container\">\n"
                     + "                <h2><b>LISTAGEM DE ESTADOS<b></h2>\n"
-                    + "                <table class=\"table table-striped\">\n"
+                    + "                <table class=\"table table-bordered\">\n"
                     + "                    <thead>\n"
                     + "                        <tr>\n"
                     + "                            <th>ID</th>\n"

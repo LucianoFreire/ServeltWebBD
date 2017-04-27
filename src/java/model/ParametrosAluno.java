@@ -47,10 +47,10 @@ public class ParametrosAluno extends ConexaoBD {
             while (rs.next()) {
                 html = html
                         + "<tr>\n"
-                        + "<td><input type=\"text\" name=\"id\" value=\"" + rs.getString("id") + "\"></td>\n"
-                        + "<td><input type=\"text\" name=\"nome\" value=\"" + rs.getString("nome") + "\"></td>\n"
-                        + "<td><input type=\"text\" name=\"sobrenome\" value=\"" + rs.getString("sobrenome") + "\"></td>\n"
-                        + "<td><input type=\"text\" name=\"matricula\" value=\"" + rs.getString("matricula") + "\"></td>\n"
+                        + "<td><input type=\"text\" class=\"form-control\"name=\"id\" value=\"" + rs.getString("id") + "\"></td>\n"
+                        + "<td><input type=\"text\" class=\"form-control\"name=\"nome\" value=\"" + rs.getString("nome") + "\"></td>\n"
+                        + "<td><input type=\"text\" class=\"form-control\"name=\"sobrenome\" value=\"" + rs.getString("sobrenome") + "\"></td>\n"
+                        + "<td><input type=\"text\" class=\"form-control\"name=\"matricula\" value=\"" + rs.getString("matricula") + "\"></td>\n"
                         + "</tr>\n";
             }
 

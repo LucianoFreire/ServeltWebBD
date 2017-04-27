@@ -27,7 +27,7 @@ ESTADO NAO RODA - ERRO AO INSERIR E LISTAR-->
             <div class="container">
                 <h2>FORMULÁRIO ALUNO</h2>
                 <p>Obs: A matricula do aluno é única, não podendo efetuar dois cadastro com a mesma matricula!</p>            
-                <table class="table table-striped">
+                <table class="table table-bordered">
                     <thead>
                         <tr>
                             <th>NOME</th>
@@ -36,12 +36,15 @@ ESTADO NAO RODA - ERRO AO INSERIR E LISTAR-->
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>              
-                            <td><input type="text" name="nome"></td>
-                            <td><input type="text" name="sobrenome"></td>
-                            <td><input type="text" name="matricula"></td>
 
+                    <div class="form-group">
+                        <tr>
+                            <td><input type="text" class="form-control" name="nome"></td>
+                            <td><input type="text" class="form-control" name="sobrenome"></td>
+                            <td><input type="text" class="form-control" name="matricula"></td>
                         </tr>
+
+                    </div>
                     </tbody>
                 </table>
             </div>  
@@ -69,7 +72,7 @@ ESTADO NAO RODA - ERRO AO INSERIR E LISTAR-->
 
             <div class="container">
                 <h2>FORMULÁRIO ESTADO</h2>
-                <table class="table table-striped">
+                <table class="table table-bordered">
                     <thead>
                         <tr>
                             <th>NOME</th>
@@ -77,10 +80,13 @@ ESTADO NAO RODA - ERRO AO INSERIR E LISTAR-->
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>            
-                            <td><input type="text" name="nome"></td>
-                            <td><input type="text" name="sigla"></td>
+                    <div class="form-group">
+                        <tr>
+                            <td><input type="text" class="form-control" name="nome"></td>
+                            <td><input type="text" class="form-control" name="sigla"></td>
                         </tr>
+
+                    </div>
                     </tbody>
                 </table>
             </div>  
@@ -108,7 +114,7 @@ ESTADO NAO RODA - ERRO AO INSERIR E LISTAR-->
             <div class="container">
                 <h2>FORMULÁRIO CIDADE</h2>
 
-                <table class="table table-striped">
+                <table class="table table-bordered">
                     <thead>
                         <tr>  
                             <td><p><b>NOME</b></p></td>
@@ -117,11 +123,12 @@ ESTADO NAO RODA - ERRO AO INSERIR E LISTAR-->
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>              
-                            <td><input type="text" name="nome"></td>
-                            <td><input type="text" name="id_estado"></td>
-
+                    <div class="form-group">
+                        <tr>
+                            <td><input type="text" class="form-control" name="nome"></td>
+                            <td><input type="text" class="form-control" name="id_estado"></td>
                         </tr>
+                    </div>
                     </tbody>
                 </table>
             </div> 
@@ -149,7 +156,7 @@ ESTADO NAO RODA - ERRO AO INSERIR E LISTAR-->
             <div class="container">
                 <h2>FORMULÁRIO ENDEREÇO</h2>
 
-                <table class="table table-striped">
+                <table class="table table-bordered">
                     <thead>
                         <tr>  
                             <td><p><b>RUA</b></p></td>
@@ -162,14 +169,17 @@ ESTADO NAO RODA - ERRO AO INSERIR E LISTAR-->
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>              
-                            <td><input type="text" name="rua"></td>
-                            <td><input type="text" name="bairro"></td>
-                            <td><input type="text" name="numero"></td>
-                            <td><input type="text" name="complemento"></td>
-                            <td><input type="text" name="cep"></td>
-                            <td><input type="text" name="id_cidade"></td>
+
+                    <div class="form-group">
+                        <tr>
+                            <td><input type="text" class="form-control" name="rua"></td>
+                            <td><input type="text" class="form-control" name="bairro"></td>
+                            <td><input type="text" class="form-control" name="numero"></td>
+                            <td><input type="text" class="form-control" name="complemento"></td>
+                            <td><input type="text" class="form-control" name="cep"></td>
+                            <td><input type="text" class="form-control" name="id_cidade"></td>
                         </tr>
+                    </div>
                     </tbody>
                 </table>
             </div> 
@@ -197,7 +207,7 @@ ESTADO NAO RODA - ERRO AO INSERIR E LISTAR-->
             <div class="container">
                 <h2>FORMULÁRIO TELEFONE</h2>
 
-                <table class="table table-striped">
+                <table class="table table-bordered">
                     <thead>
                         <tr>  
                             <td><p><b>ID</b></p></td>
@@ -207,12 +217,13 @@ ESTADO NAO RODA - ERRO AO INSERIR E LISTAR-->
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>              
-                            <td><input type="text" name="id"></td>
-                            <td><input type="text" name="dd"></td>
-                            <td><input type="text" name="numero"></td>
-                            <td><input type="text" name="id_pessoa"></td>
-                        </tr>
+                    <div class="form-group">
+                        <tr>
+                            <td><input type="text" class="form-control" name="id"></td>
+                            <td><input type="text" class="form-control" name="dd"></td>
+                            <td><input type="text" class="form-control" name="numero"></td>
+                            <td><input type="text" class="form-control" name="id_pessoa"></td>
+                    </div>
                     </tbody>
                 </table>
             </div> 
@@ -240,7 +251,7 @@ ESTADO NAO RODA - ERRO AO INSERIR E LISTAR-->
             <div class="container">
                 <h2>FORMULÁRIO PESSOA</h2>
 
-                <table class="table table-striped">
+                <table class="table table-bordered">
                     <thead>
                         <tr>  
                             <td><p><b>NOME</b></p></td>
@@ -253,14 +264,16 @@ ESTADO NAO RODA - ERRO AO INSERIR E LISTAR-->
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>              
-                            <td><input type="text" name="nome"></td>
-                            <td><input type="text" name="sobrenome"></td>
-                            <td><input type="text" name="email"></td>
-                            <td><input type="text" name="idconjuge_pessoa"></td>
-                            <td><input type="text" name="id_endereco"></td>
-                            <td><input type="text" name="id_aluno_responsavel"></td>
-                        </tr>
+
+                    <div class="form-group">
+                        <tr>
+                            <td><input type="text" class="form-control" name="nome"></td>
+                            <td><input type="text" class="form-control" name="sobrenome"></td>
+                            <td><input type="text" class="form-control" name="email"></td>
+                            <td><input type="text" class="form-control" name="idconjuge_pessoa"></td>
+                            <td><input type="text" class="form-control" name="id_endereco"></td>
+                            <td><input type="text" class="form-control" name="id_aluno_responsavel"></td>
+                    </div>
                     </tbody>
                 </table>
             </div> 

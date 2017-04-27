@@ -47,7 +47,7 @@ public class ServletPessoa extends HttpServlet {
                     + "<form align=\"center\">\n"
                     + "<div class=\"container\">\n"
                     + "                <h2><b>LISTAGEM DE PESSOAS<b></h2>\n"
-                    + "                <table class=\"table table-striped\">\n"
+                    + "                <table class=\"table table-bordered\">\n"
                     + "                    <thead>\n"
                     + "                        <tr>\n"
                     + "                            <th>ID</th>\n"

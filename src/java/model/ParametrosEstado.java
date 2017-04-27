@@ -46,9 +46,9 @@ public class ParametrosEstado extends ConexaoBD {
             while (rs.next()) {
                 html = html
                         + "<tr>\n"
-                        + "<td><input type=\"text\" name=\"id\" value=\"" + rs.getString("id") + "\"></td>\n"
-                        + "<td><input type=\"text\" name=\"nome\" value=\"" + rs.getString("nome") + "\"></td>\n"
-                        + "<td><input type=\"text\" name=\"sigla\" value=\"" + rs.getString("sigla") + "\"></td>\n"
+                        + "<td><input type=\"text\" class=\"form-control\name=\"id\" value=\"" + rs.getString("id") + "\"></td>\n"
+                        + "<td><input type=\"text\" class=\"form-control\name=\"nome\" value=\"" + rs.getString("nome") + "\"></td>\n"
+                        + "<td><input type=\"text\" class=\"form-control\name=\"sigla\" value=\"" + rs.getString("sigla") + "\"></td>\n"
                         + "</tr>\n";
             }
 

@@ -47,13 +47,13 @@ public class ParametrosEndereco extends ConexaoBD {
 
             while (rs.next()) {
                 html = html + "<tr>\n"
-                        + "<td><input type=\"text\" name=\"id\" value=\"" + rs.getString("id") + "\"></td>\n"
-                        + "<td><input type=\"text\" name=\"rua\" value=\"" + rs.getString("rua") + "\"></td>\n"
-                        + "<td><input type=\"text\" name=\"bairro\" value=\"" + rs.getString("bairro") + "\"></td>\n"
-                        + "<td><input type=\"text\" name=\"numero\" value=\"" + rs.getString("numero") + "\"></td>\n"
-                        + "<td><input type=\"text\" name=\"complemento\" value=\"" + rs.getString("complemento") + "\"></td>\n"
-                        + "<td><input type=\"text\" name=\"cep\" value=\"" + rs.getString("cep") + "\"></td>\n"
-                        + "<td><input type=\"text\" name=\"id_cidade\" value=\"" + rs.getString("id_cidade") + "\"></td>\n"
+                        + "<td><input type=\"text\" class=\"form-control\name=\"id\" value=\"" + rs.getString("id") + "\"></td>\n"
+                        + "<td><input type=\"text\" class=\"form-control\name=\"rua\" value=\"" + rs.getString("rua") + "\"></td>\n"
+                        + "<td><input type=\"text\" class=\"form-control\name=\"bairro\" value=\"" + rs.getString("bairro") + "\"></td>\n"
+                        + "<td><input type=\"text\" class=\"form-control\name=\"numero\" value=\"" + rs.getString("numero") + "\"></td>\n"
+                        + "<td><input type=\"text\" class=\"form-control\name=\"complemento\" value=\"" + rs.getString("complemento") + "\"></td>\n"
+                        + "<td><input type=\"text\" class=\"form-control\name=\"cep\" value=\"" + rs.getString("cep") + "\"></td>\n"
+                        + "<td><input type=\"text\" class=\"form-control\name=\"id_cidade\" value=\"" + rs.getString("id_cidade") + "\"></td>\n"
                         + "</tr>\n";
             }
 
