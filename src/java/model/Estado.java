@@ -7,6 +7,7 @@ public class Estado {
     private String sigla;
 
     public Estado() {
+        
     }
 
     public Estado(int id, String nome, String sigla) {
